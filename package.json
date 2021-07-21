@@ -1,0 +1,27 @@
+{
+  "name": "reversi",
+  "version": "0.0.1",
+  "description": "This is a web page of the game reversi\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[\u001b\u001b[B\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Cbpage of the game reversi",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CathyDu1/reversi.git"
+  },
+  "keywords": [
+    "reversi",
+    "project"
+  ],
+  "author": "Xinyan Du",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/CathyDu1/reversi/issues"
+  },
+  "homepage": "https://github.com/CathyDu1/reversi#readme",
+  "dependencies": {
+    "node-static": "^0.7.11",
+    "socket.io": "^4.1.3"
+  }
+}
