@@ -61,8 +61,7 @@ io.on('connection',(socket) => {
             'username': the name of the user joining the room
         }
      */
-
-    /**
+    /*
         //message that the server sends back to the cilent
         join_room_response:
         {
@@ -78,7 +77,6 @@ io.on('connection',(socket) => {
             'message': the reason for failure
         }
      */
-
     //Code for receiving input from client
     socket.on('join_room', (payload) => {
         serverLog('Server received a command','\'join_room\'',JSON.stringify(payload));
@@ -135,7 +133,6 @@ io.on('connection',(socket) => {
                     room: room
                 }
                 /* Anncounce to everyone that is in the room, who else is in the room */
-                /* 有问题 */
                 for(const member of sockets){
                     response = {
                         result: 'success',
@@ -145,21 +142,9 @@ io.on('connection',(socket) => {
                         count: sockets.length
                     }
                     /* Tell everyone that a new user has joined the chat room */
-                    if(member == sockets[sockets.length-1]){
-                        io.of('/').to(room).emit('join_room_response',response);
-                    }
-                   
+                    io.of('/').to(room).emit('join_room_response',response);
                     serverLog('join_room succeeded ',JSON.stringify(response));
                 }
-                /*
-                response = {};
-                response.result = 'success';
-                response.room = room;
-                response.username = username;
-                response.count = sockets.length;
-                io.of('/').to(room).emit('join_room_response',response);
-                serverLog('join_room succeeded ',JSON.stringify(response));
-                */
             }
         });
     });
@@ -178,9 +163,7 @@ io.on('connection',(socket) => {
             /* Tell everyone who leave the room, send socket.io message to the client side */
             io.of("/").to(room).emit('player_disconnected',payload);
             serverLog('player_disconnected succeeded',JSON.stringify(payload));
-
         }
-
     });
 
     
